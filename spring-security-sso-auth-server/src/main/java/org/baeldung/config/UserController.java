@@ -2,6 +2,7 @@ package org.baeldung.config;
 
 import java.security.Principal;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,5 +13,10 @@ public class UserController {
     public Principal user(Principal principal) {
         System.out.println(principal);
         return principal;
+    }
+
+    @RequestMapping("/")
+    public String t(){
+        return "suth server";
     }
 }
